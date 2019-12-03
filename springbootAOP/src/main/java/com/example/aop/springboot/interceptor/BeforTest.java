@@ -34,7 +34,7 @@ public class BeforTest {
     public void around(String name ,String age) {
     }
 
-    @Around(value = "around(name,age)",argNames = "joinPoint,name,age")
+    //@Around(value = "around(name,age)",argNames = "joinPoint,name,age")
     public void aroundFirst(ProceedingJoinPoint joinPoint,String name,String age) throws Throwable {
         System.out.println("我是环绕开始");
         //获取参数
@@ -47,4 +47,7 @@ public class BeforTest {
         joinPoint.proceed();
         System.out.println("我是环绕结束");
     }
+
+
+
 }
