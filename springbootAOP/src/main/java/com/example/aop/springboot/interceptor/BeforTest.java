@@ -35,14 +35,14 @@ public class BeforTest {
     }
 
     @Around(value = "around(name,age)",argNames = "joinPoint,name,age")
-    public void aroundFirst(ProceedingJoinPoint joinPoint,String name,String age) throws Throwable {
-        System.out.println("我是环绕开始");
-        /*
-        //获取参数
-        System.out.println(" " + name  + age);
+    public void aroundFirst(ProceedingJoinPoint joinPoint,String/*System.out.println(" " + name  + age);
          for ( int i = 0 ;joinPoint.getArgs().length >i;i++){
              System.out.println( joinPoint.getArgs()[i]);
-         }*/
+             joinPoint.getArgs()[i].getClass();
+         }*/ name,String age) throws Throwable {
+        System.out.println("我是环绕开始");
+        //获取参数
+
          //执行方法
         joinPoint.proceed();
         System.out.println("我是环绕结束");
