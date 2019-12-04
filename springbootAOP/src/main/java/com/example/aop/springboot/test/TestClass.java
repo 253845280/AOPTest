@@ -1,5 +1,6 @@
 package com.example.aop.springboot.test;
 
+import com.example.aop.springboot.vail.ParamCheck;
 import com.example.aop.springboot.vail.VailData;
 
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.List;
 
 @VailData
 public class TestClass<E> {
+    @ParamCheck(Length = 100)
     private String str;
     private Integer add;
     private Date time;

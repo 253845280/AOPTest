@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Date;
 
@@ -19,12 +20,12 @@ public class FirstAOP {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext(FirstAOP.class);
         FirstAOP firstAOP= (FirstAOP) annotationConfigApplicationContext.getBean("firstAOP");
-        firstAOP.pringTest("测试","20");
-        /*TestClass<String> t = new TestClass<>();
+        //firstAOP.pringTest("测试","20");
+        TestClass<String> t = new TestClass<>();
         t.setAdd(1);
         t.setTime(new Date());
         t.setStr("str");
-        firstAOP.pringTest(t);*/
+        firstAOP.pringTest(t);
     }
 
 
